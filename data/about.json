@@ -1,0 +1,87 @@
+{
+  "name": "Avinash Reddy Thipparthi",
+  "title": "Cloud & DevOps Specialist | AWS Community Builder | Docker Captain",
+  "academy": "Aviz Academy",
+  "bio": "With over 14 years of IT experience, Avinash transitioned from a ₹4.5K/month job to a Cloud expert, mentoring thousands through Aviz Academy and YouTube.",
+  "theme": {
+    "primaryColor": "#0066cc",
+    "secondaryColor": "#00aaff", 
+    "backgroundColor": "#f5f8fa",
+    "textColor": "#2c3e50",
+    "fontFamily": "'Poppins', sans-serif"
+  },
+  "animations": {
+    "cardHover": {
+      "transform": "translateY(-5px)",
+      "transition": "all 0.3s ease"
+    },
+    "fadeIn": {
+      "animation": "fadeIn 0.5s ease-in",
+      "keyframes": {
+        "from": { "opacity": 0 },
+        "to": { "opacity": 1 }
+      }
+    }
+  },
+  "styles": {
+    "container": {
+      "maxWidth": "1200px",
+      "margin": "0 auto",
+      "padding": "2rem"
+    },
+    "card": {
+      "backgroundColor": "#ffffff",
+      "borderRadius": "10px",
+      "boxShadow": "0 4px 6px rgba(0,0,0,0.1)",
+      "padding": "1.5rem",
+      "marginBottom": "1rem"
+    },
+    "button": {
+      "backgroundColor": "#0066cc",
+      "color": "#ffffff",
+      "padding": "0.75rem 1.5rem",
+      "borderRadius": "5px",
+      "border": "none",
+      "cursor": "pointer"
+    }
+  },
+  "certifications": [
+    "7× AWS Certified",
+    "Azure",
+    "GCP", 
+    "Red Hat",
+    "Docker Captain"
+  ],
+  "links": [
+    {
+      "label": "Official Website",
+      "url": "https://avizacademy.com",
+      "icon": "🌐",
+      "hoverEffect": true
+    },
+    {
+      "label": "YouTube - Aviz Way", 
+      "url": "https://www.youtube.com/@avizway",
+      "icon": "▶️",
+      "hoverEffect": true
+    },
+    {
+      "label": "LinkedIn - IAM Module",
+      "url": "https://www.linkedin.com/posts/avizway_deep-dive-iam-module-by-avinash-reddy-thipparthi-activity-7338508462223433729-y5zr/",
+      "icon": "💼",
+      "hoverEffect": true
+    },
+    {
+      "label": "AWS Projects Playlist",
+      "url": "https://www.youtube.com/watch?v=8I_uKOngOug",
+      "icon": "📺",
+      "hoverEffect": true
+    },
+    {
+      "label": "Career Journey Post",
+      "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7313459433987022848/",
+      "icon": "📝",
+      "hoverEffect": true
+    }
+  ]
+}

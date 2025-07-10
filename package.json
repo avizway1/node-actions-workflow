@@ -1,0 +1,15 @@
+{
+  "name": "docker-ec2-project",
+  "version": "1.0.0",
+  "description": "This is a Node.js application that displays information about **Avinash Reddy Thipparthi**, the founder of **Aviz Academy**. It's designed for deployment via Docker and AWS EC2.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
