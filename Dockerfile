@@ -6,11 +6,8 @@ WORKDIR /app
 # Copy package files first for better caching
 COPY package*.json ./
 
-# Install dependencies
+# Install production dependencies only
 RUN npm ci --omit=dev
-
-# Remove build dependencies to reduce image size and attack surface
-RUN apk del .gyp
 
 # Copy app files
 COPY . .
