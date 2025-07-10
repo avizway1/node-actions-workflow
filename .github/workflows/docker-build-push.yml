@@ -1,31 +1,27 @@
-name: Docker Image CI
+name: Docker CI/CD
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches: [main]
 
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v4
 
     - name: Log in to Docker Hub
-      run: echo "${{ secrets.DOCKERHUB_PASSWORD }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
+      uses: docker/login-action@v2
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
-    - name: Build the Docker image
-      run: |
-        IMAGE=your-dockerhub-username/aviz-app
-        TAG=$(date +%Y%m%d%H%M%S)
-        docker build . -t $IMAGE:$TAG
-        docker tag $IMAGE:$TAG $IMAGE:latest
-        echo "IMAGE_NAME=$IMAGE" >> $GITHUB_ENV
-        echo "IMAGE_TAG=$TAG" >> $GITHUB_ENV
-
-    - name: Push image to Docker Hub
-      run: |
-        docker push $IMAGE_NAME:$IMAGE_TAG
-        docker push $IMAGE_NAME:latest
+    - name: Build and push Docker image
+      uses: docker/build-push-action@v6
+      with:
+        context: .
+        file: Dockerfile
+        push: true
+        tags: |
+          ${{ secrets.DOCKERHUB_USERNAME }}/aviz-app:latest
+          ${{ secrets.DOCKERHUB_USERNAME }}/aviz-app:${{ github.run_id }}
